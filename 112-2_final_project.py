@@ -43,7 +43,7 @@ if __name__ == '__main__':
                   temp_state=state
                   
                   dist=distance()
-                  if dist<=200:
+                  if dist<=20:
                         GPIO.output(Relay_pin,GPIO.HIGH)
                         print("人來了",end="\n")
                         firebase.put_async('/data','state',"人來了")
